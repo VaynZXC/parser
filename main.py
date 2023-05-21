@@ -11,8 +11,11 @@ def main():
     div = soup.find('div', id='questions')
     a = div.find_all('a', class_='s-link')
 
+    n = 1
+
     for _ in a:
-        print(base + _.get('href'))
+        print(str(n) + ' вопрос: ' + base + _.get('href'))
+        n += 1
 
 
 if __name__ == "__main__":
